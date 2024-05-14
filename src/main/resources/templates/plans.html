@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Resumen de Planes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #0054a6; /* Tigo blue */
+        }
+        .header {
+            background-color: #0054a6; /* Tigo blue */
+            padding: 10px 20px;
+            text-align: center;
+            color: white;
+        }
+        .content {
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #0054a6;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        select, button {
+            padding: 10px;
+            margin-top: 20px;
+        }
+        button {
+            background-color: #0054a6;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #003580;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>Seleccione su Plan</h1>
+</div>
+<div class="content">
+    <table>
+        <tr>
+            <th>Plan</th>
+            <th>Costo</th>
+        </tr>
+        <!-- Repetimos para cada plan -->
+        <tr><td>Plan1: Tv</td><td>$20000</td></tr>
+        <tr><td>Plan2: Tv</td><td>$30000</td></tr>
+        <tr><td>Plan3: Tv</td><td>$40000</td></tr>
+        <tr><td>Plan1: Internet</td><td>$104000</td></tr>
+        <tr><td>Plan2: Internet</td><td>$106000</td></tr>
+        <tr><td>Plan3: Internet</td><td>$108000</td></tr>
+        <tr><td>Plan1: TriplePlay</td><td>$125000</td></tr>
+        <tr><td>Plan2: TriplePlay</td><td>$135000</td></tr>
+        <tr><td>Plan3: TriplePlay</td><td>$145000</td></tr>
+    </table>
+    <form th:action="@{/submitPlan}" th:method="post">
+        <select name="selectedPlan">
+            <option value="Plan1:Tv">$20,000</option>
+            <option value="Plan2:Tv">$30,000</option>
+            <option value="Plan3:Tv">$40,000</option>
+            <option value="Plan1:Internet">$104,000</option>
+            <option value="Plan2:Internet">$106,000</option>
+            <option value="Plan3:Internet">$108,000</option>
+            <option value="Plan1:TriplePlay">$125,000</option>
+            <option value="Plan2:TriplePlay">$135,000</option>
+            <option value="Plan3:TriplePlay">$145,000</option>
+        </select>
+        <button type="submit">Siguiente</button>
+
+    </form>
+</div>
+<div class="footer">
+    <p>Derechos Reservados © 2024</p>
+</div>
+</body>
+</html>
