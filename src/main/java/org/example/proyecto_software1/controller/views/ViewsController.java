@@ -15,28 +15,26 @@ public class ViewsController {
     public String showForm() {
         return "discover";
     }
-
-    @PostMapping("/submitForm")
-    public String submitForm(@RequestBody Client client, Model model) {
-        System.out.println(client);
-
-        return "plans";
+    @GetMapping("/success")
+    public String showSuccess() {
+        return "success";
     }
-
+    @GetMapping("/reject")
+    public String showReject() {
+        return "reject";
+    }
+    @GetMapping("/contract")
+    public String showContract() {
+        return "contract";
+    }
+    @GetMapping("/notAvailable")
+    public String showNoDisponibilidad() {
+        return "notAvailable";
+    }
         @GetMapping("/plans")
         public String showPlans() {
             return "plans";
         }
-
-        @PostMapping("/submitPlan")
-        public String submitPlan(@RequestParam("selectedPlan") String selectedPlan, Model model) {
-            model.addAttribute("selectedPlan", selectedPlan);
-            // TODO
-            //ENVIAR PARA REGLA DE NEGOCIO
-            return "confirmation";
-        }
-
-
 }
 
 

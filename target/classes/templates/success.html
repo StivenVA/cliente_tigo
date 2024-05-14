@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Bienvenido a la Aplicación</title>
+    <title>Felicitaciones</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -10,17 +10,26 @@
             padding: 0;
             background-color: #fff;
             color: #0054a6; /* Tigo blue */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
         }
         .header {
             background-color: #0054a6; /* Tigo blue */
             padding: 10px 20px;
             text-align: center;
             color: white;
+            width: 100%;
         }
         .content {
-            margin: 20px;
-            padding: 20px;
             text-align: center;
+            padding: 20px;
+            width: 50%;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 10px;
         }
         .footer {
             position: fixed;
@@ -32,28 +41,15 @@
             text-align: center;
             padding: 10px;
         }
-        button {
-            padding: 10px 20px;
-            background-color: #0054a6;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        button:hover {
-            background-color: #003580;
-        }
     </style>
 </head>
 <body>
 <div class="header">
-    <h1>Bienvenido a Tigo</h1>
+    <h1>Felicitaciones</h1>
 </div>
 <div class="content">
-    <p>En esta página puede adquirir algún plan que desee.</p>
-    <p>Explora nuestras funciones y descubre más sobre nuestros servicios.</p>
-    <button th:onclick="'location.href=\'/discover\''">Averiguar planes</button>
+    <h2>¡Felicitaciones por haber contratado con Tigo!</h2>
+    <p>Gracias por confiar en nosotros. Estamos comprometidos a brindarte el mejor servicio.</p>
 </div>
 <div class="footer">
     <p>Derechos Reservados © 2024</p>

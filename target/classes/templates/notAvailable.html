@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Formulario de Cliente</title>
+    <title>No Disponible</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -10,17 +10,22 @@
             padding: 0;
             background-color: #fff;
             color: #0054a6; /* Tigo blue */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
         }
         .header {
             background-color: #0054a6; /* Tigo blue */
             padding: 10px 20px;
             text-align: center;
             color: white;
+            width: 100%;
         }
         .content {
-            margin: 20px;
-            padding: 20px;
             text-align: center;
+            padding: 20px;
         }
         .footer {
             position: fixed;
@@ -32,15 +37,14 @@
             text-align: center;
             padding: 10px;
         }
-        input, button {
-            margin: 10px 0;
-            padding: 10px;
-            border-radius: 5px;
-        }
         button {
             background-color: #0054a6;
             color: white;
             border: none;
+            padding: 10px 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            cursor: pointer;
         }
         button:hover {
             background-color: #003580;
@@ -49,23 +53,12 @@
 </head>
 <body>
 <div class="header">
-    <h1>Formulario del Cliente</h1>
+    <h1>No Disponible</h1>
 </div>
 <div class="content">
-    <form action="#" th:action="@{/discover/submitForm}" th:method="post">
-        <div>
-            <label for="name">Nombre del Cliente:</label>
-            <input type="text" id="name" name="customerName" required>
-        </div>
-        <div>
-            <label for="address">Dirección del Cliente:</label>
-            <input type="text" id="address" name="customerAddress" required>
-        </div>
-        <div>
-            <label for="number">Número del Cliente:</label>
-            <input type="number" id="number" name="customerNumber" required>
-        </div>
-        <button type="submit" id="send">Enviar</button>
+    <h1>No hay disponibilidad en este momento. Por favor, intente más tarde.</h1>
+    <form th:action="@{/discover/completeActivity}" method="post">
+        <button type="submit">Aceptar</button>
     </form>
 </div>
 <div class="footer">
